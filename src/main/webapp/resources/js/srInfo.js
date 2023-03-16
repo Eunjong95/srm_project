@@ -474,9 +474,11 @@ function updateProgress5() {
 }
 /* 계획정보 변경 */
 function planUpdate() {
-	console.log("$('#SRPlMemberId').val() : " + $("#SRPlMemberId").val())
-	console.log("$('#changeMemberId').val() : " + $("#changeMemberId").val())
-
+	var selectedElement = document.getElementById("dept");
+	var deptCd = selectedElement.options[selectedElement.selectedIndex].value;
+	console.log("계획정보 변경");
+	console.log("바뀔 부서" + deptCd);
+	
 	if($("#changeMemberId").val()==null) {
 		var memberId = $("#SRPlMemberId").val();
 	} else {
@@ -489,7 +491,7 @@ function planUpdate() {
 		data : {
 			dmndNo : $("#SRPlDmndNo").val(),
 			memberId : memberId,
-			deptCd : $("#SRDept").val(),
+			deptCd : deptCd,
 			bgngYmd : $("#SRPlBgngYmd").val(),
 			endYmd : $("#SRPlEndYmd").val(),
 			rvwCn : $("#SRPlRvwCn").val()

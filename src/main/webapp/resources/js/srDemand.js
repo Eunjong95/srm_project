@@ -248,8 +248,7 @@ function goDecline(dmndNo) {
 }
 
 function endSr() {
-   var dmndNo = $(".dmndNo").val();
-   console.log(dmndNo + " 반영요청 버튼 누름~");
+   var dmndNo = document.getElementById("dmndNo").innerText;
    $.ajax({
       url : '/srdemand/end',
       type : 'POST',

@@ -360,7 +360,7 @@ th {
 									<div class="form-group row">
 										<div class="col col-sm-2 font-weight-bold  px-0">SR번호</div>
 										<div class="col col-sm-10">
-											<div class="form-control dmndNo"
+											<div class="form-control" id="dmndNo"
 												style="font-size: 12px; width: 100%;">${sd.dmndNo}</div>
 										</div>
 									</div>

@@ -6,7 +6,7 @@
 <style>
 
 </style>
-<div class="card">
+<div class="card" style="height:450px;">
 	<div class="card-header">
 		<h5 class="card-header-text">문의사항</h5>
 	</div>
@@ -20,10 +20,10 @@
 				<thead>
 					<tr>
 						<th class="col-1" style="text-align: center;"></th>
-						<th class="col-7 text-left">제목</th>
+						<th class="col-5 text-left">제목</th>
 						<th class="col-1">작성자</th>
 						<th class="col-3">작성날짜</th>
-						<th class="col-3">답변상태</th>
+						<th class="col-2">답변상태</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -43,10 +43,10 @@
 						<td>${board.wrtNm}</td>
 						<td>${board.wrtYmd}</td>
 						<c:if test="${board.ansYn == false}">
-							<td>미답변</td>
+							<td class="text-center">미답변</td>
 						</c:if>
 						<c:if test="${board.ansYn == true}">
-							<td>답변완료</td>
+							<td class="text-center">답변완료</td>
 						</c:if>
 					</tr>
 				</c:forEach>
@@ -54,5 +54,6 @@
 		</tbody>
 	</table>
 	<!-- 페이징 처리 -->
+	<br/>
 	<%@ include file="/WEB-INF/views/mytodo/mQnaPager.jsp"%>
 </div>
